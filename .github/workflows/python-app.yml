@@ -78,14 +78,14 @@ jobs:
                  # Faz pull da nova imagem
                  sudo docker pull docker.io/ngaloni/senai_fastapi:latest
                  # Para e remove o container atual (ignora erro se não existir)
-                 #docker stop senai_fastapi 2>/dev/null || true
-                 #docker rm senai_fastapi 2>/dev/null || true
+                 sudo docker stop senai_fastapi 2>/dev/null || true
+                 sudo docker rm senai_fastapi 2>/dev/null || true
                  # Sobe o novo containe
-                 #docker run -d \
-                 # --name senai_fastapi \
-                 # --restart unless-stopped \
-                 # -p 8080:8080 \
-                 # ngaloni/senai_fastapi:latest
+                 sudo docker run -d \
+                  --name senai_fastapi \
+                  --restart unless-stopped \
+                  -p 8080:8080 \
+                  ngaloni/senai_fastapi:latest
                   
                   # Health check pós-deploy
                   
