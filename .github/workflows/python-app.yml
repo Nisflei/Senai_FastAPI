@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: ./dockerfile
+          file: dockerfile
           push: true
           tags: |
             ncgaloni/senai_fastapi:latest
