@@ -49,4 +49,9 @@ jobs:
             ngaloni/senai_fastapi:latest
             ngaloni/senai_fastapi:${{ github.sha }}
 
+      - name: Resumo do deploy
+        run: |
+           echo "## ✅ Imagem publicada no Docker Hub" >> $GITHUB_STEP_SUMMARY
+           echo "Tags: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
+
     
