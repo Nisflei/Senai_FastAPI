@@ -6,6 +6,7 @@ on:
   
 jobs:
   Build:
+    name: Compilar Projeto
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -32,7 +33,7 @@ jobs:
     
     - name: Resumo do Build
       run: |
-          echo "## ✅ Imagem publicada no Docker Hub" >> $GITHUB_STEP_SUMMARY
+          echo "## ✅ Resumo Compilação" >> $GITHUB_STEP_SUMMARY
           echo "Tags: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
   
   Imagem:
