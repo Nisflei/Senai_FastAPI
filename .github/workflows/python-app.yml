@@ -2,10 +2,8 @@ name: Python application
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    branches: [ "develop_x" ]
+  
 jobs:
   build:
     runs-on: ubuntu-latest
