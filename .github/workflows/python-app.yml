@@ -48,7 +48,7 @@ jobs:
           file: ./dockerfile
           push: true
           tags: |
-            ncgaloni/Senai_FASTAPI:latest
-            ncgaloni/Senai_FASTAPI:${{ github.sha }}
+            ncgaloni/senai_fastapi:latest
+            ncgaloni/senai_fastapi:${{ github.sha }}
 
     
