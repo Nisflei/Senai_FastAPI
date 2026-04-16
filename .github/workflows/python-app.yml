@@ -75,9 +75,8 @@ jobs:
              key: ${{ secrets.EC2_SSH_KEY }}
              #envs: IMAGE_NAME,CONTAINER_NAME,APP_PORT
              script: |
-                 sudo su
                  # Faz pull da nova imagem
-                 docker pull ngaloni/senai_fastapi:latest
+                 sudo docker pull docker.io/ngaloni/senai_fastapi:latest
                  # Para e remove o container atual (ignora erro se não existir)
                  #docker stop senai_fastapi 2>/dev/null || true
                  #docker rm senai_fastapi 2>/dev/null || true
