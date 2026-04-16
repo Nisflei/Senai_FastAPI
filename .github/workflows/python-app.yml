@@ -77,9 +77,11 @@ jobs:
              script: |
                  # Faz pull da nova imagem
                  sudo docker pull docker.io/ngaloni/senai_fastapi:latest
+                 
                  # Para e remove o container atual (ignora erro se não existir)
                  sudo docker stop senai_fastapi 2>/dev/null || true
                  sudo docker rm senai_fastapi 2>/dev/null || true
+                 
                  # Sobe o novo containe
                  sudo docker run -d \
                   --name senai_fastapi \
@@ -87,12 +89,11 @@ jobs:
                   -p 8080:8080 \
                   ngaloni/senai_fastapi:latest
                   
-                  # Health check pós-deploy
-                  
-                  #sleep 5
-                  #curl -f http://localhost:8080/health || exit 1
-                  echo "✅ Deploy concluído com sucesso!"
-                  # Remove imagens antigas (economiza espaço em disco)
-                  docker image prune -f
+                 # Health check pós-deploy
+                 sleep 5
+                 curl -f http://localhost:8080/health || exit 1
+                 echo "✅ Deploy concluído com sucesso!"
+                 # Remove imagens antigas (economiza espaço em disco)
+                 sudo docker image prune -f
 
     
