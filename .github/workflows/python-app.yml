@@ -88,6 +88,7 @@ jobs:
                   ngaloni/senai_fastapi:latest
                   
                   # Health check pós-deploy
+                  
                   sleep 5
                   curl -f http://localhost:8080/health || exit 1
                   echo "✅ Deploy concluído com sucesso!"
