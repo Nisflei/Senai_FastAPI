@@ -37,6 +37,11 @@ jobs:
     steps:
       - name: Configurar o Docker na VM
         uses: docker/build-push-action@v7.1.0
-      
+        with:
+          push: true
+          tags: |
+              ngaloni/senai_api_ta:latest
+              ngaloni/senai_api_ta:${{github.sha}}
+          
 
     
