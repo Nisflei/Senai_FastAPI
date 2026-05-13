@@ -9,7 +9,7 @@ class Item(BaseModel):
 
 @app.get("/")
 async def root():
-  return {"status": "ok", "message": "API rodando!"}
+  return {"status": "ok", "message": "API rodando! Parabens Turma A"}
 
 @app.get("/health")
 async def health():
